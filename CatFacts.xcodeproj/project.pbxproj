@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		30B57A932B149F2B0018BAF3 /* CatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A922B149F2B0018BAF3 /* CatProvider.swift */; };
 		30B57A952B14A12E0018BAF3 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A942B14A12E0018BAF3 /* CatListViewModel.swift */; };
+		30B57A972B14A36C0018BAF3 /* CatFactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A962B14A36C0018BAF3 /* CatFactsNavigationController.swift */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40626136D370090B26A /* CatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40526136D370090B26A /* CatListViewController.swift */; };
-		88CFD40926136D370090B26A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40726136D370090B26A /* Main.storyboard */; };
 		88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40A26136D3A0090B26A /* Assets.xcassets */; };
 		88CFD40E26136D3A0090B26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CFD40C26136D3A0090B26A /* LaunchScreen.storyboard */; };
 		88CFD41926136D3B0090B26A /* CatFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD41826136D3B0090B26A /* CatFactsTests.swift */; };
@@ -43,12 +43,12 @@
 		234E791A278BD48F9DCDB12D /* Pods-CatFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatFacts.release.xcconfig"; path = "Target Support Files/Pods-CatFacts/Pods-CatFacts.release.xcconfig"; sourceTree = "<group>"; };
 		30B57A922B149F2B0018BAF3 /* CatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProvider.swift; sourceTree = "<group>"; };
 		30B57A942B14A12E0018BAF3 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
+		30B57A962B14A36C0018BAF3 /* CatFactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsNavigationController.swift; sourceTree = "<group>"; };
 		7025BE16E2DC605F899A2A46 /* Pods-CatFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatFacts.debug.xcconfig"; path = "Target Support Files/Pods-CatFacts/Pods-CatFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88CFD40326136D370090B26A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		88CFD40526136D370090B26A /* CatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewController.swift; sourceTree = "<group>"; };
-		88CFD40826136D370090B26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88CFD40A26136D3A0090B26A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88CFD40D26136D3A0090B26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88CFD40F26136D3A0090B26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		30B57A8D2B149E2A0018BAF3 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				88CFD40326136D370090B26A /* SceneDelegate.swift */,
 				88CFD40126136D370090B26A /* AppDelegate.swift */,
+				88CFD40326136D370090B26A /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -109,7 +109,6 @@
 		30B57A8E2B149E790018BAF3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				88CFD40726136D370090B26A /* Main.storyboard */,
 				88CFD40A26136D3A0090B26A /* Assets.xcassets */,
 				88CFD40C26136D3A0090B26A /* LaunchScreen.storyboard */,
 			);
@@ -135,6 +134,7 @@
 		30B57A912B149EAC0018BAF3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				30B57A962B14A36C0018BAF3 /* CatFactsNavigationController.swift */,
 				88CFD40526136D370090B26A /* CatListViewController.swift */,
 			);
 			path = Controller;
@@ -327,7 +327,6 @@
 			files = (
 				88CFD40E26136D3A0090B26A /* LaunchScreen.storyboard in Resources */,
 				88CFD40B26136D3A0090B26A /* Assets.xcassets in Resources */,
-				88CFD40926136D370090B26A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +395,7 @@
 			files = (
 				88CFD43626136D610090B26A /* FactsApi.swift in Sources */,
 				30B57A952B14A12E0018BAF3 /* CatListViewModel.swift in Sources */,
+				30B57A972B14A36C0018BAF3 /* CatFactsNavigationController.swift in Sources */,
 				30B57A932B149F2B0018BAF3 /* CatProvider.swift in Sources */,
 				88CFD40626136D370090B26A /* CatListViewController.swift in Sources */,
 				88E7FBCD26136F7600185018 /* Cat.swift in Sources */,
@@ -436,14 +436,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		88CFD40726136D370090B26A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88CFD40826136D370090B26A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		88CFD40C26136D3A0090B26A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

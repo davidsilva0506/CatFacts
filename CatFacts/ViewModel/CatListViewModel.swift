@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PackListViewModel: NSObject {
+final class CatListViewModel: NSObject {
     private unowned let provider: CatProvider
 
     init(provider: CatProvider) {

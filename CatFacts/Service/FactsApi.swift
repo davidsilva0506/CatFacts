@@ -10,7 +10,6 @@ import Alamofire
 
 class FactsApi: CatProvider {
     private enum Constants {
-        
         static let URLString = "https://api.npoint.io/18962a8a5d00e62a8d2a"
         static let contentType = "application/json"
         static let accetableStatusCode = 200..<300
