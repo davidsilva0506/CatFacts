@@ -10,6 +10,8 @@
 		30B57A932B149F2B0018BAF3 /* CatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A922B149F2B0018BAF3 /* CatProvider.swift */; };
 		30B57A952B14A12E0018BAF3 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A942B14A12E0018BAF3 /* CatListViewModel.swift */; };
 		30B57A972B14A36C0018BAF3 /* CatFactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A962B14A36C0018BAF3 /* CatFactsNavigationController.swift */; };
+		30B57A992B14A8020018BAF3 /* CatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A982B14A8020018BAF3 /* CatStatus.swift */; };
+		30B57A9C2B14AB560018BAF3 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A9B2B14AB560018BAF3 /* Core.swift */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40626136D370090B26A /* CatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40526136D370090B26A /* CatListViewController.swift */; };
@@ -18,7 +20,7 @@
 		88CFD41926136D3B0090B26A /* CatFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD41826136D3B0090B26A /* CatFactsTests.swift */; };
 		88CFD42426136D3B0090B26A /* CatFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD42326136D3B0090B26A /* CatFactsUITests.swift */; };
 		88CFD43626136D610090B26A /* FactsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD43526136D610090B26A /* FactsApi.swift */; };
-		88E7FBCD26136F7600185018 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7FBCC26136F7600185018 /* Cat.swift */; };
+		88E7FBCD26136F7600185018 /* CatFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7FBCC26136F7600185018 /* CatFact.swift */; };
 		E43AD9115AFF4B8FD48140A6 /* Pods_CatFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E4E467BA69CCD125797C98 /* Pods_CatFacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		30B57A922B149F2B0018BAF3 /* CatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProvider.swift; sourceTree = "<group>"; };
 		30B57A942B14A12E0018BAF3 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
 		30B57A962B14A36C0018BAF3 /* CatFactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsNavigationController.swift; sourceTree = "<group>"; };
+		30B57A982B14A8020018BAF3 /* CatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatStatus.swift; sourceTree = "<group>"; };
+		30B57A9B2B14AB560018BAF3 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		7025BE16E2DC605F899A2A46 /* Pods-CatFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatFacts.debug.xcconfig"; path = "Target Support Files/Pods-CatFacts/Pods-CatFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +63,7 @@
 		88CFD42326136D3B0090B26A /* CatFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsUITests.swift; sourceTree = "<group>"; };
 		88CFD42526136D3B0090B26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88CFD43526136D610090B26A /* FactsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsApi.swift; sourceTree = "<group>"; };
-		88E7FBCC26136F7600185018 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		88E7FBCC26136F7600185018 /* CatFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFact.swift; sourceTree = "<group>"; };
 		E0E4E467BA69CCD125797C98 /* Pods_CatFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,7 +96,8 @@
 		30B57A8C2B149E100018BAF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88E7FBCC26136F7600185018 /* Cat.swift */,
+				88E7FBCC26136F7600185018 /* CatFact.swift */,
+				30B57A982B14A8020018BAF3 /* CatStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +145,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		30B57A9A2B14AB460018BAF3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				30B57A9B2B14AB560018BAF3 /* Core.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		5DA7FF2352DD7DBE0AA1DF08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,7 @@
 				88CFD40F26136D3A0090B26A /* Info.plist */,
 				30B57A8D2B149E2A0018BAF3 /* App */,
 				30B57A8E2B149E790018BAF3 /* Resources */,
+				30B57A9A2B14AB460018BAF3 /* Core */,
 				88CFD43426136D500090B26A /* Service */,
 				30B57A8C2B149E100018BAF3 /* Model */,
 				30B57A8F2B149E8C0018BAF3 /* View */,
@@ -398,8 +412,10 @@
 				30B57A972B14A36C0018BAF3 /* CatFactsNavigationController.swift in Sources */,
 				30B57A932B149F2B0018BAF3 /* CatProvider.swift in Sources */,
 				88CFD40626136D370090B26A /* CatListViewController.swift in Sources */,
-				88E7FBCD26136F7600185018 /* Cat.swift in Sources */,
+				88E7FBCD26136F7600185018 /* CatFact.swift in Sources */,
 				88CFD40226136D370090B26A /* AppDelegate.swift in Sources */,
+				30B57A992B14A8020018BAF3 /* CatStatus.swift in Sources */,
+				30B57A9C2B14AB560018BAF3 /* Core.swift in Sources */,
 				88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

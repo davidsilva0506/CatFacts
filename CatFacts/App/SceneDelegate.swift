@@ -9,9 +9,11 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-
+    var core: Core?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+
+        self.setupCore()
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
@@ -28,9 +30,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     
 
+    private func setupCore() {
+            
+        self.core = Core(service: FactsApi())
+    }
+
     private func rootViewController() -> UINavigationController {
         
-        let catListViewModel = CatListViewModel(provider: FactsApi())
+        guard let core else {
+            
+            assertionFailure("We should have core at this stage")
+            return UINavigationController()
+        }
+
+        let catListViewModel = CatListViewModel(provider: core.service)
         let catListViewController = CatListViewController(viewModel: catListViewModel)
         
         return CatFactsNavigationController(rootViewController: catListViewController)

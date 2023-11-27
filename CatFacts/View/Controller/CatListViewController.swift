@@ -27,5 +27,7 @@ class CatListViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "Cat Facts"
+        
+        self.viewModel.requestCatFacts()
     }
 }

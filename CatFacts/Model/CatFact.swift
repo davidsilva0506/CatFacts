@@ -8,12 +8,7 @@
 import Foundation
 
 struct CatFact: Decodable {
-    let status: Status
+    let status: CatStatus
     let text: String
     let createdAt: Date
-}
-
-struct Status: Decodable {
-    let verified: Bool
-    let sentCount: Int
 }
