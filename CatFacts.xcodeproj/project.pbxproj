@@ -85,6 +85,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30B57A8C2B149E100018BAF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88E7FBCC26136F7600185018 /* Cat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30B57A8D2B149E2A0018BAF3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				88CFD40326136D370090B26A /* SceneDelegate.swift */,
+				88CFD40126136D370090B26A /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		30B57A8E2B149E790018BAF3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88CFD40726136D370090B26A /* Main.storyboard */,
+				88CFD40A26136D3A0090B26A /* Assets.xcassets */,
+				88CFD40C26136D3A0090B26A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30B57A8F2B149E8C0018BAF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30B57A912B149EAC0018BAF3 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30B57A902B149E920018BAF3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30B57A912B149EAC0018BAF3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88CFD40526136D370090B26A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5DA7FF2352DD7DBE0AA1DF08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,14 +168,13 @@
 		88CFD40026136D370090B26A /* CatFacts */ = {
 			isa = PBXGroup;
 			children = (
-				88CFD43426136D500090B26A /* API */,
-				88CFD40126136D370090B26A /* AppDelegate.swift */,
-				88CFD40326136D370090B26A /* SceneDelegate.swift */,
-				88CFD40526136D370090B26A /* ViewController.swift */,
-				88CFD40726136D370090B26A /* Main.storyboard */,
-				88CFD40A26136D3A0090B26A /* Assets.xcassets */,
-				88CFD40C26136D3A0090B26A /* LaunchScreen.storyboard */,
 				88CFD40F26136D3A0090B26A /* Info.plist */,
+				30B57A8D2B149E2A0018BAF3 /* App */,
+				30B57A8E2B149E790018BAF3 /* Resources */,
+				88CFD43426136D500090B26A /* Service */,
+				30B57A8C2B149E100018BAF3 /* Model */,
+				30B57A8F2B149E8C0018BAF3 /* View */,
+				30B57A902B149E920018BAF3 /* ViewModel */,
 			);
 			path = CatFacts;
 			sourceTree = "<group>";
@@ -148,13 +197,12 @@
 			path = CatFactsUITests;
 			sourceTree = "<group>";
 		};
-		88CFD43426136D500090B26A /* API */ = {
+		88CFD43426136D500090B26A /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				88CFD43526136D610090B26A /* FactsApi.swift */,
-				88E7FBCC26136F7600185018 /* Cat.swift */,
 			);
-			path = API;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		ECBFCEB9B3B0E1B295F597A6 /* Pods */ = {
