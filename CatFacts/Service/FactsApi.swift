@@ -8,14 +8,19 @@
 import Foundation
 import Alamofire
 
-class FactsApi {
-    
+class FactsApi: CatProvider {
+    private enum Constants {
+        
+        static let URLString = "https://api.npoint.io/18962a8a5d00e62a8d2a"
+        static let contentType = "application/json"
+        static let accetableStatusCode = 200..<300
+    }
     
     func getFacts(completion: @escaping ([CatFact]?, Error?) -> Void) {
 
-        AF.request("https://api.npoint.io/18962a8a5d00e62a8d2a")
-            .validate(statusCode: 200..<300)
-            .validate(contentType: ["application/json"])
+        AF.request(Constants.URLString)
+            .validate(statusCode: Constants.accetableStatusCode)
+            .validate(contentType: [Constants.contentType])
             .responseDecodable(of: [CatFact].self, decoder: CustomDecoder()) { response in
                 switch response.result {
                 case .success:
