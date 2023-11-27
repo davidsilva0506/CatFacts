@@ -10,7 +10,7 @@ import UIKit
 
 class CatFactsNavigationController: UINavigationController {
     private enum Constants {
-        static let fontSize: CGFloat = 15
+        static let fontSize: CGFloat = 20
     }
 
     override func viewDidLoad() {
@@ -34,5 +34,6 @@ class CatFactsNavigationController: UINavigationController {
 
         navigationBar.standardAppearance = appearance
         navigationBar.scrollEdgeAppearance = appearance
+        navigationBar.prefersLargeTitles = true
     }
 }

@@ -12,6 +12,14 @@
 		30B57A972B14A36C0018BAF3 /* CatFactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A962B14A36C0018BAF3 /* CatFactsNavigationController.swift */; };
 		30B57A992B14A8020018BAF3 /* CatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A982B14A8020018BAF3 /* CatStatus.swift */; };
 		30B57A9C2B14AB560018BAF3 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A9B2B14AB560018BAF3 /* Core.swift */; };
+		30B57A9F2B14ADD00018BAF3 /* CatFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57A9E2B14ADD00018BAF3 /* CatFactTableViewCell.swift */; };
+		30B57AA22B14AEBA0018BAF3 /* UIView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57AA12B14AEBA0018BAF3 /* UIView+Helper.swift */; };
+		30B57AA42B14B12F0018BAF3 /* CatFactTableViewCell+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57AA32B14B12F0018BAF3 /* CatFactTableViewCell+Configuration.swift */; };
+		30B57AA62B14B6C70018BAF3 /* UIViewController+ActivityOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57AA52B14B6C70018BAF3 /* UIViewController+ActivityOverlay.swift */; };
+		30B57AA92B14B7140018BAF3 /* OverlayActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57AA82B14B7140018BAF3 /* OverlayActivityView.swift */; };
+		30B57AAB2B14BAB10018BAF3 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57AAA2B14BAB10018BAF3 /* Array+Safe.swift */; };
+		30B57AAD2B14FC410018BAF3 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57AAC2B14FC410018BAF3 /* Date+Helper.swift */; };
+		30B57AAF2B1541F50018BAF3 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B57AAE2B1541F50018BAF3 /* String+Helper.swift */; };
 		88CFD40226136D370090B26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40126136D370090B26A /* AppDelegate.swift */; };
 		88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40326136D370090B26A /* SceneDelegate.swift */; };
 		88CFD40626136D370090B26A /* CatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFD40526136D370090B26A /* CatListViewController.swift */; };
@@ -48,6 +56,14 @@
 		30B57A962B14A36C0018BAF3 /* CatFactsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsNavigationController.swift; sourceTree = "<group>"; };
 		30B57A982B14A8020018BAF3 /* CatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatStatus.swift; sourceTree = "<group>"; };
 		30B57A9B2B14AB560018BAF3 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		30B57A9E2B14ADD00018BAF3 /* CatFactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactTableViewCell.swift; sourceTree = "<group>"; };
+		30B57AA12B14AEBA0018BAF3 /* UIView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helper.swift"; sourceTree = "<group>"; };
+		30B57AA32B14B12F0018BAF3 /* CatFactTableViewCell+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatFactTableViewCell+Configuration.swift"; sourceTree = "<group>"; };
+		30B57AA52B14B6C70018BAF3 /* UIViewController+ActivityOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityOverlay.swift"; sourceTree = "<group>"; };
+		30B57AA82B14B7140018BAF3 /* OverlayActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayActivityView.swift; sourceTree = "<group>"; };
+		30B57AAA2B14BAB10018BAF3 /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
+		30B57AAC2B14FC410018BAF3 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
+		30B57AAE2B1541F50018BAF3 /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 		7025BE16E2DC605F899A2A46 /* Pods-CatFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatFacts.debug.xcconfig"; path = "Target Support Files/Pods-CatFacts/Pods-CatFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		88CFD3FE26136D370090B26A /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CFD40126136D370090B26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +139,8 @@
 		30B57A8F2B149E8C0018BAF3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30B57AA72B14B7060018BAF3 /* Common */,
+				30B57A9D2B14ADAE0018BAF3 /* Cells */,
 				30B57A912B149EAC0018BAF3 /* Controller */,
 			);
 			path = View;
@@ -151,6 +169,35 @@
 				30B57A9B2B14AB560018BAF3 /* Core.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		30B57A9D2B14ADAE0018BAF3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30B57A9E2B14ADD00018BAF3 /* CatFactTableViewCell.swift */,
+				30B57AA32B14B12F0018BAF3 /* CatFactTableViewCell+Configuration.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		30B57AA02B14AEAE0018BAF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30B57AA12B14AEBA0018BAF3 /* UIView+Helper.swift */,
+				30B57AA52B14B6C70018BAF3 /* UIViewController+ActivityOverlay.swift */,
+				30B57AAA2B14BAB10018BAF3 /* Array+Safe.swift */,
+				30B57AAC2B14FC410018BAF3 /* Date+Helper.swift */,
+				30B57AAE2B1541F50018BAF3 /* String+Helper.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30B57AA72B14B7060018BAF3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				30B57AA82B14B7140018BAF3 /* OverlayActivityView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		5DA7FF2352DD7DBE0AA1DF08 /* Frameworks */ = {
@@ -190,6 +237,7 @@
 				30B57A8D2B149E2A0018BAF3 /* App */,
 				30B57A8E2B149E790018BAF3 /* Resources */,
 				30B57A9A2B14AB460018BAF3 /* Core */,
+				30B57AA02B14AEAE0018BAF3 /* Extensions */,
 				88CFD43426136D500090B26A /* Service */,
 				30B57A8C2B149E100018BAF3 /* Model */,
 				30B57A8F2B149E8C0018BAF3 /* View */,
@@ -409,14 +457,22 @@
 			files = (
 				88CFD43626136D610090B26A /* FactsApi.swift in Sources */,
 				30B57A952B14A12E0018BAF3 /* CatListViewModel.swift in Sources */,
+				30B57AA42B14B12F0018BAF3 /* CatFactTableViewCell+Configuration.swift in Sources */,
 				30B57A972B14A36C0018BAF3 /* CatFactsNavigationController.swift in Sources */,
+				30B57AAB2B14BAB10018BAF3 /* Array+Safe.swift in Sources */,
 				30B57A932B149F2B0018BAF3 /* CatProvider.swift in Sources */,
 				88CFD40626136D370090B26A /* CatListViewController.swift in Sources */,
 				88E7FBCD26136F7600185018 /* CatFact.swift in Sources */,
+				30B57AA92B14B7140018BAF3 /* OverlayActivityView.swift in Sources */,
 				88CFD40226136D370090B26A /* AppDelegate.swift in Sources */,
 				30B57A992B14A8020018BAF3 /* CatStatus.swift in Sources */,
 				30B57A9C2B14AB560018BAF3 /* Core.swift in Sources */,
 				88CFD40426136D370090B26A /* SceneDelegate.swift in Sources */,
+				30B57AA22B14AEBA0018BAF3 /* UIView+Helper.swift in Sources */,
+				30B57AAD2B14FC410018BAF3 /* Date+Helper.swift in Sources */,
+				30B57AA62B14B6C70018BAF3 /* UIViewController+ActivityOverlay.swift in Sources */,
+				30B57AAF2B1541F50018BAF3 /* String+Helper.swift in Sources */,
+				30B57A9F2B14ADD00018BAF3 /* CatFactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

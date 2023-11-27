@@ -13,7 +13,6 @@ final class Core: NSObject {
     init(service: FactsApi) {
         
         self.service = service
-
         super.init()
     }
 }
