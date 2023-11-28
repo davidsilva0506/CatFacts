@@ -9,14 +9,17 @@ import Foundation
 
 protocol CatListViewModelDelegate: AnyObject {
 
-    func didLoad(_ viewModel: Any, success: Bool, error: Error?)
-    func didUpdate(_ viewModel: Any)
+    func viewModel(_ viewModel: Any, loaded: Bool, error: Error?)
+    func viewModel(_ viewModel: Any, updated: Bool)
 }
 
 final class CatListViewModel: NSObject {
+    
     public weak var delegate: CatListViewModelDelegate?
-    private var orginalFacts = [CatFact]()
+    
     var filteredFacts = [CatFact]()
+    private var orginalFacts = [CatFact]()
+    
     private unowned let provider: CatProvider
 
     init(provider: CatProvider) {
@@ -27,30 +30,40 @@ final class CatListViewModel: NSObject {
     func requestCatFacts() {
         
         self.provider.getFacts { facts, error in
+            
             guard error == nil,
                 let facts = facts else {
-                self.delegate?.didLoad(self, success: false, error: error)
+                    
+                self.delegate?.viewModel(self, loaded: false, error: error)
                 return
             }
+
             self.orginalFacts = facts
             self.filteredFacts = facts
-            self.delegate?.didLoad(self, success: true, error: nil)
+            
+            self.delegate?.viewModel(self, loaded: true, error: nil)
         }
     }
     
     func filterCurrentFacts(searchTerm: String) {
         
-        guard searchTerm.count > 0 else { return }
-        self.filteredFacts = self.orginalFacts
+        guard searchTerm.count > 0 else {
+            
+            self.delegate?.viewModel(self, updated: false)
+            return
+        }
+        
         self.filteredFacts = self.orginalFacts.filter { fact in
+           
             fact.text.validText().contains(searchTerm.validText())
         }
-        self.delegate?.didUpdate(self)
+        
+        self.delegate?.viewModel(self, updated: true)
     }
     
     func restoreCurrentFacts() {
         
         self.filteredFacts = self.orginalFacts
-        self.delegate?.didUpdate(self)
+        self.delegate?.viewModel(self, updated: true)
     }
 }

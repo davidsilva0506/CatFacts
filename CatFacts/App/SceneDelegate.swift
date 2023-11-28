@@ -8,6 +8,7 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
     var window: UIWindow?
     var core: Core?
 
@@ -28,7 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 extension SceneDelegate {
-    
 
     private func setupCore() {
             
@@ -36,8 +36,9 @@ extension SceneDelegate {
     }
 
     private func rootViewController() -> UINavigationController {
-        
+
         guard let core else {
+            
             assertionFailure("We should have core at this stage")
             return UINavigationController()
         }

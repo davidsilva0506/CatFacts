@@ -8,14 +8,18 @@
 import UIKit
 
 public final class OverlayActivityView: UIView {
+    
     private enum Constants {
+        
         static let defaultOpacity: CGFloat = 0.4
     }
+    
     let activityIndicator = UIActivityIndicatorView(style: .large)
 
     public override init(frame: CGRect) {
 
         super.init(frame: frame)
+        
         self.addSubviews()
         self.configureView()
         self.defineSubviewConstraints()
@@ -28,13 +32,13 @@ public final class OverlayActivityView: UIView {
 }
 
 public extension OverlayActivityView {
-    
 
     static func addTo(superView: UIView) -> OverlayActivityView {
 
         let overlayActivityView = OverlayActivityView()
         superView.addSubview(overlayActivityView)
         overlayActivityView.pin(to: superView)
+        
         return overlayActivityView
     }
 
@@ -42,6 +46,7 @@ public extension OverlayActivityView {
 
         self.activityIndicator.color = UIColor.gray
         self.activityIndicator.startAnimating()
+        
         self.backgroundColor = UIColor.clear
         self.isHidden = false
         self.superview?.bringSubviewToFront(self)
@@ -55,7 +60,6 @@ public extension OverlayActivityView {
 }
 
 private extension OverlayActivityView {
-    
     
     func addSubviews() {
 

@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 class CatFactsNavigationController: UINavigationController {
+    
     private enum Constants {
+        
         static let fontSize: CGFloat = 20
     }
 

@@ -8,16 +8,22 @@
 import UIKit
 
 class CatListViewController: UIViewController {
+    
     private enum Constants {
+        
         static let title = "Cat Facts"
         static let cellIdentifier = "CatFactTableViewCell"
         static let searchBarPlaceholder = "Search cat fact"
         static let isNewPeriod = 90
     }
+    
     private let viewModel: CatListViewModel
     private let searchController = UISearchController()
+    
     private lazy var tableView: UITableView = {
+        
         let tableView = UITableView(frame: .zero, style: .grouped)
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.contentInset = .zero
@@ -33,7 +39,9 @@ class CatListViewController: UIViewController {
     init(viewModel: CatListViewModel) {
 
         self.viewModel = viewModel
+        
         super.init(nibName: nil, bundle: nil)
+        
         self.viewModel.delegate = self
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
@@ -47,6 +55,7 @@ class CatListViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         self.addSubviews()
         self.configureView()
         self.defineSubviewConstraints()
@@ -55,7 +64,6 @@ class CatListViewController: UIViewController {
 }
 
 private extension CatListViewController {
-    
     
     func requestData() {
         
@@ -72,6 +80,7 @@ private extension CatListViewController {
         
         self.title = Constants.title
         self.navigationItem.searchController = self.searchController
+       
         self.tableView.register(CatFactTableViewCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
     }
     
@@ -86,7 +95,6 @@ private extension CatListViewController {
 }
 
 extension CatListViewController: UITableViewDataSource {
-
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -107,12 +115,11 @@ extension CatListViewController: UITableViewDataSource {
         }
 
         cell.selectionStyle = .none
+        
         let daysSinceCreated = fact.createdAt.daysBetween(date: Date())
         let isNew = abs(daysSinceCreated) <= Constants.isNewPeriod
-        cell.configure(catFactText: fact.text, isVerified: fact.status.verified, isNew: isNew)
         
-        self.view.layoutSubviews()
-        self.updateViewConstraints()
+        cell.configure(catFactText: fact.text, isVerified: fact.status.verified, isNew: isNew)
 
         return cell
     }
@@ -120,39 +127,47 @@ extension CatListViewController: UITableViewDataSource {
 
 extension CatListViewController: CatListViewModelDelegate {
     
-    
-    func didLoad(_ viewModel: Any, success: Bool, error: Error?) {
+    func viewModel(_ viewModel: Any, loaded: Bool, error: Error?) {
         
         self.hideActivityOverlay()
+        
         if let error {
+            
             self.showError(message: error.localizedDescription)
-        } else if success == true {
+            
+        } else if loaded == true {
+            
             self.tableView.reloadData()
         }
     }
     
-    func didUpdate(_ viewModel: Any) {
+    func viewModel(_ viewModel: Any, updated: Bool) {
         
-        self.tableView.reloadData()
+        if updated == true {
+            
+            self.tableView.reloadData()
+        }
     }
 }
 
 extension CatListViewController: UISearchResultsUpdating {
     
-    
     func updateSearchResults(for searchController: UISearchController) {
     
         guard let searchText = searchController.searchBar.text else { return }
+        
         if searchText.isEmpty {
+            
             self.viewModel.restoreCurrentFacts()
+            
         } else {
+            
             self.viewModel.filterCurrentFacts(searchTerm: searchText)
         }
     }
 }
 
 extension CatListViewController: UISearchBarDelegate {
-
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         

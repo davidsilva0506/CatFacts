@@ -8,6 +8,7 @@
 import Foundation
 
 struct CatStatus: Decodable {
+    
     let verified: Bool
     let sentCount: Int
 }

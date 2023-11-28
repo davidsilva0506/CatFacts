@@ -8,6 +8,7 @@
 import Foundation
 
 final class Core: NSObject {
+    
     let service: FactsApi
 
     init(service: FactsApi) {

@@ -9,6 +9,5 @@ import Foundation
 
 protocol CatProvider: AnyObject {
 
-
     func getFacts(completion: @escaping ([CatFact]?, Error?) -> Void)
 }

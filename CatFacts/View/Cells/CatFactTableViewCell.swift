@@ -8,7 +8,9 @@
 import UIKit
 
 class CatFactTableViewCell: UITableViewCell {
+    
     private enum Constants {
+        
         static let fontSize: CGFloat = 16
         static let imageHeight: CGFloat = 40
         static let imageWidth: CGFloat = 40
@@ -17,6 +19,7 @@ class CatFactTableViewCell: UITableViewCell {
         static let spaceBetweenImages: CGFloat = 10
         static let new = "new"
     }
+    
     var catFactLabel = UILabel()
     var imageContainer = UIView()
     var verifiedImageView = UIImageView()
@@ -25,6 +28,7 @@ class CatFactTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         self.addSubviews()
         self.configureView()
         self.defineSubviewConstraints()
@@ -38,7 +42,6 @@ class CatFactTableViewCell: UITableViewCell {
 
 private extension CatFactTableViewCell {
 
-
     func addSubviews() {
         
         self.imageContainer.add(self.verifiedImageView, self.newFactImageView)
@@ -48,10 +51,13 @@ private extension CatFactTableViewCell {
     func configureView() {
 
         self.selectionStyle = .none
+        
         self.catFactLabel.font = UIFont.systemFont(ofSize: Constants.fontSize, weight: .regular)
         self.catFactLabel.numberOfLines = 0
+        
         self.verifiedImageView.clipsToBounds = true
         self.verifiedImageView.contentMode = .scaleAspectFit
+        
         self.newFactImageView.clipsToBounds = true
         self.newFactImageView.contentMode = .scaleAspectFit
         self.newFactImageView.image = UIImage(named: Constants.new)
@@ -63,6 +69,7 @@ private extension CatFactTableViewCell {
         self.imageContainer.translatesAutoresizingMaskIntoConstraints = false
         self.verifiedImageView.translatesAutoresizingMaskIntoConstraints = false
         self.newFactImageView.translatesAutoresizingMaskIntoConstraints = false
+        
         self.catFactLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: Constants.verticalSpace).isActive = true
         self.catFactLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: Constants.horizontalSpace).isActive = true
         self.catFactLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -Constants.horizontalSpace).isActive = true

@@ -8,7 +8,9 @@
 import UIKit
 
 extension CatFactTableViewCell {
+    
     private enum Constants {
+        
         static let verified = "verified"
         static let unverified = "unverified"
     }
@@ -16,7 +18,9 @@ extension CatFactTableViewCell {
     func configure(catFactText: String, isVerified: Bool, isNew: Bool) {
 
         self.catFactLabel.text = catFactText
+        
         let imageName = isVerified ? Constants.verified : Constants.unverified
+        
         self.verifiedImageView.image = UIImage(named: imageName)
         self.newFactImageView.isHidden = !isNew
     }

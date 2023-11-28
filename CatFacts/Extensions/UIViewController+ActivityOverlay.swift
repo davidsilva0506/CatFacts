@@ -8,7 +8,6 @@
 import UIKit
 
 public extension UIViewController {
-
     
     func showActivityOverlay() {
 
@@ -23,7 +22,6 @@ public extension UIViewController {
 }
 
 private extension UIViewController {
-
 
     func overlayActivityParentView() -> UIView {
 
