@@ -81,12 +81,12 @@ private extension CatFactTableViewCell {
         self.imageContainer.heightAnchor.constraint(equalToConstant: Constants.imageHeight).isActive = true
         
         self.verifiedImageView.topAnchor.constraint(equalTo: self.imageContainer.topAnchor).isActive = true
-        self.verifiedImageView.leadingAnchor.constraint(equalTo: self.imageContainer.leadingAnchor).isActive = true
+        self.verifiedImageView.trailingAnchor.constraint(equalTo: self.imageContainer.trailingAnchor).isActive = true
         self.verifiedImageView.bottomAnchor.constraint(equalTo: self.imageContainer.bottomAnchor).isActive = true
         self.verifiedImageView.widthAnchor.constraint(equalToConstant: Constants.imageWidth).isActive = true
 
         self.newFactImageView.topAnchor.constraint(equalTo: self.imageContainer.topAnchor).isActive = true
-        self.newFactImageView.leadingAnchor.constraint(equalTo: self.verifiedImageView.trailingAnchor, constant: Constants.spaceBetweenImages).isActive = true
+        self.newFactImageView.trailingAnchor.constraint(equalTo: self.verifiedImageView.leadingAnchor, constant: -Constants.spaceBetweenImages).isActive = true
         self.newFactImageView.bottomAnchor.constraint(equalTo: self.imageContainer.bottomAnchor).isActive = true
         self.newFactImageView.widthAnchor.constraint(equalToConstant: Constants.imageWidth).isActive = true
     }
