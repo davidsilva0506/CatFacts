@@ -38,20 +38,3 @@ class FactsApi: CatProvider {
         }
     }
 }
-
-class CustomDecoder: JSONDecoder {
-
-    static let iso8601Full: DateFormatter = {
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss Z"
-        
-        return formatter
-      }()
-
-    override init() {
-        
-        super.init()
-        dateDecodingStrategy = .formatted(CustomDecoder.iso8601Full)
-    }
-}

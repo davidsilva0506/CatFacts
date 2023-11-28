@@ -4,9 +4,11 @@
 //
 //  Created by David Silva on 28/11/2023.
 //
-import XCTest
 
-extension XCTestCase {
+import Foundation
+@testable import CatFacts
+
+struct JSONHelper {
     
     public enum TestError: Error {
         
@@ -14,7 +16,7 @@ extension XCTestCase {
         case fileNotFound(fileName: String)
     }
 
-    public func loadJSON<T: Any>(from fileName: String) throws -> T {
+    static func loadJSON<T: Any>(from fileName: String) throws -> T {
 
         guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
 
@@ -32,13 +34,12 @@ extension XCTestCase {
         return object
     }
 
-    public func load<T: Decodable>(from fileName: String) throws -> T {
+    static func load<T: Decodable>(from fileName: String) throws -> T {
 
         let file = try self.loadJSON(from: fileName) as Any
         let data = try JSONSerialization.data(withJSONObject: file, options: [.prettyPrinted])
 
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
+        let decoder = CustomDecoder()
 
         return try decoder.decode(T.self, from: data)
     }
