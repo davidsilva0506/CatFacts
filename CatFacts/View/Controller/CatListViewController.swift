@@ -14,6 +14,8 @@ class CatListViewController: UIViewController {
         static let title = "Cat Facts"
         static let cellIdentifier = "CatFactTableViewCell"
         static let searchBarPlaceholder = "Search cat fact"
+        static let errorTitle = "Oops"
+        static let buttonTitle = "Ok"
         static let isNewPeriod = 90
     }
     
@@ -91,6 +93,12 @@ private extension CatListViewController {
     
     func showError(message: String) {
         
+        let alert = UIAlertController(title: Constants.errorTitle,
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Constants.buttonTitle, style: .destructive))
+        
+        self.present(alert, animated: true)
     }
 }
 
@@ -129,23 +137,33 @@ extension CatListViewController: CatListViewModelDelegate {
     
     func viewModel(_ viewModel: Any, loaded: Bool, error: Error?) {
         
-        self.hideActivityOverlay()
-        
-        if let error {
+        DispatchQueue.main.async { [weak self] in
             
-            self.showError(message: error.localizedDescription)
+            guard let self else { return }
+
+            self.hideActivityOverlay()
             
-        } else if loaded == true {
-            
-            self.tableView.reloadData()
+            if let error {
+                
+                self.showError(message: error.localizedDescription)
+                
+            } else if loaded == true {
+                
+                self.tableView.reloadData()
+            }
         }
     }
     
     func viewModel(_ viewModel: Any, updated: Bool) {
         
-        if updated == true {
+        DispatchQueue.main.async { [weak self] in
             
-            self.tableView.reloadData()
+            guard let self else { return }
+            
+            if updated == true {
+                
+                self.tableView.reloadData()
+            }
         }
     }
 }
@@ -157,7 +175,7 @@ extension CatListViewController: UISearchResultsUpdating {
         guard let searchText = searchController.searchBar.text else { return }
         
         if searchText.isEmpty {
-            
+
             self.viewModel.restoreCurrentFacts()
             
         } else {
